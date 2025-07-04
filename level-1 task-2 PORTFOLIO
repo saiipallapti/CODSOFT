@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | Pallapati Saikrishna</title>
+  <title>Pallapati Saikrishna | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-pEMX+E3BJ3s+hO/jnO0rIBoHZMc0UExgOHJt7WkgS07oI1CBP1TXqIQZ/8BOhH0oPmN2l6dwjkgti67J2MJu/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
+    :root {
+      --primary-color: #34495e;
+      --accent-color: #3498db;
+      --bg-color: #f2f4f8;
+      --white: #fff;
+      --text-color: #333;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -13,19 +22,16 @@
     }
 
     body {
-      background: linear-gradient(120deg, #f5f7fa, #c3cfe2);
-      color: #333;
+      background: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
-      padding: 20px;
     }
 
     header {
+      background: var(--primary-color);
+      color: var(--white);
       text-align: center;
-      padding: 40px 20px;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
+      padding: 60px 20px;
     }
 
     header h1 {
@@ -34,39 +40,47 @@
     }
 
     header p {
-      font-size: 1.2em;
-      color: #666;
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    nav {
+      background: #2c3e50;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
     }
 
     section {
-      background: #fff;
+      background: var(--white);
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 40px;
       border-radius: 12px;
-      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: var(--primary-color);
       margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    #about img {
-      display: block;
-      margin: 20px auto;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    h2 {
-      margin-bottom: 15px;
-      color: #2c3e50;
-    }
-
-    ul {
+    .skills-list, .certifications-list, .contact-list {
       list-style: none;
-      padding-left: 0;
+      padding: 0;
     }
 
-    ul li {
+    .skills-list li, .certifications-list li, .contact-list li {
       padding: 8px 0;
       border-bottom: 1px solid #eee;
     }
@@ -75,8 +89,30 @@
       margin-bottom: 20px;
     }
 
+    .project h3 {
+      color: var(--accent-color);
+      margin-bottom: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .profile-img {
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     a {
-      color: #3498db;
+      color: var(--accent-color);
       text-decoration: none;
     }
 
@@ -84,20 +120,12 @@
       text-decoration: underline;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-      font-size: 0.9em;
-      color: #555;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
+    @media (max-width: 700px) {
       header h1 {
-        font-size: 2em;
+        font-size: 1.8em;
+      }
+      section {
+        padding: 20px;
       }
     }
   </style>
@@ -106,47 +134,103 @@
 
   <header>
     <h1>Pallapati Saikrishna</h1>
-    <p>Aspiring Web Developer | Angular Certified</p>
+    <p>CS Engineering student | Frontend & Python Developer | Certified in Python, SQL, JavaScript & HTML</p>
   </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#internships">Internships</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="C:/Users/My PC/Pictures/saee.png" alt="Saikrishna Photo" />
-    <p>I am a Computer Science Engineering student with a passion for web development. I’ve completed certifications in Angular, C, and Python and actively contribute to projects and internships to sharpen my skills.</p>
+    <!-- Profile image updated with the provided URL -->
+    <img src="https://media.licdn.com/dms/image/v2/D4E03AQHmFgXGLQG1ZQ/profile-displayphoto-shrink_200_200/B4EZbdxKeCHYAY-/0/1747477378104?e=1756944000&v=beta&t=LxCdkYrjuqvv-YmOzaFvhEv7ueuaJBPowXV3xEa8g0c" alt="Saikrishna Photo" class="profile-img" />
+    <p>I am a Computer Science Engineering student with practical experience as a Frontend Developer Intern at CODSOFT, where I built responsive and user-friendly web applications. I also completed an internship at Oasis Infobyte, gaining hands-on experience in Python development.</p>
+    <p>I hold certifications in Python and SQL from HackerRank and JavaScript and HTML from Cisco Networking Academy. I am passionate about learning new technologies and applying my skills to develop efficient and creative software solutions.</p>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
+    <h2>Technical Skills</h2>
+    <ul class="skills-list">
+      <li>C Programming</li>
+      <li>Python</li>
       <li>HTML & CSS</li>
       <li>JavaScript</li>
-      <li>Angular</li>
-      <li>Python</li>
-      <li>MySQL</li>
+      <li>SQL</li>
+      <li>DBMS</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
     <div class="project">
-      <h3>Landing Page</h3>
-      <p>A responsive landing page built with HTML and CSS as part of the CodSoft internship.</p>
+      <h3>Car Parking Slots System</h3>
+      <p>Developed a web-based application enabling real-time booking and management of parking slots, improving urban parking efficiency. Role: Team Leader and Backend Developer.</p>
     </div>
     <div class="project">
-      <h3>Calculator</h3>
-      <p>A JavaScript calculator with basic math operations and responsive UI.</p>
+      <h3>Landing Page</h3>
+      <p>Created a responsive landing page with smooth navigation using HTML, CSS, and Bootstrap.</p>
+    </div>
+    <div class="project">
+      <h3>Calculator App</h3>
+      <p>Developed a functional JavaScript calculator with clean UI and error handling.</p>
+    </div>
+    <div class="project">
+      <h3>Personal Portfolio Website</h3>
+      <p>Designed and developed a portfolio to showcase projects, skills, and contact information.</p>
+    <p><strong>Note:</strong> This is the portfolio website you are currently viewing!</p>
     </div>
   </section>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="#" download>Download Resume (PDF)</a></p>
+  <section id="internships">
+    <h2>Internships</h2>
+    <div class="project">
+      <h3>Web Development Intern – CODSOFT</h3>
+      <p><strong>April 2025 – May 2025</strong></p>
+      <ul>
+        <li>Developed a responsive personal portfolio website using HTML, CSS, and JavaScript.</li>
+        <li>Created a modern landing page with Bootstrap.</li>
+        <li>Built a JavaScript calculator with clean UI and error handling.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>Python Programming Intern – Oasis Infobyte</h3>
+      <p><strong>May 2025 – June 2025</strong></p>
+      <ul>
+        <li>Developed a Weather App integrating live API data.</li>
+        <li>Built a BMI Calculator and Password Generator.</li>
+        <li>Strengthened skills in writing clean, efficient Python code.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul class="certifications-list">
+      <li>Effective Problem-Solving and Decision-Making – Coursera (April 2023)</li>
+      <li>Emotional and Social Intelligence – Coursera (Dec 2022)</li>
+      <li>C for Everyone: Programming Fundamentals – Coursera (Nov 2022)</li>
+      <li>Angular Certificate – Infosys Springboard (May 2025)</li>
+      <li>Python Basics – HackerRank (May 2025)</li>
+      <li>SQL Basics – HackerRank (May 2025)</li>
+      <li>Networking Essentials – Cisco Networking Academy (May 16, 2025)</li>
+    </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: saikrishna@example.com</p>
-    <p>Phone: +91-XXXXXXXXXX</p>
+    <ul class="contact-list">
+      <li><i class="fas fa-envelope"></i> <a href="mailto:saiipallapati@gmail.com">saiipallapati@gmail.com</a></li>
+      <li><i class="fas fa-phone"></i> +91 7780238400</li>
+      <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/saii-pallapati-b8069b345" target="_blank">LinkedIn Profile</a></li>
+      <li><i class="fas fa-code"></i> <a href="https://leetcode.com/saiipallapti" target="_blank">LeetCode Profile</a></li>
+      <li><i class="fas fa-map-marker-alt"></i> Bengaluru, India</li>
+    </ul>
   </section>
 
   <footer>
